@@ -1,13 +1,9 @@
 
 import { Button } from "@/components/ui/button";
+import { scrollToForm } from "@/lib/utils";
 
 const Header = () => {
-  const scrollToForm = () => {
-    const formElement = document.getElementById('inscription-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b-2 border-warm-200">
@@ -18,7 +14,7 @@ const Header = () => {
               Liberte Sua Voz
             </h1>
             <div className="text-sm text-warm-600 font-medium">
-              Evento Presencial • Porto Alegre/RS • Vagas Limitadas
+              🎁 Live gratuita • Desconto Especial → Liberado apenas no grupo do WhatsApp
             </div>
           </div>
           <Button 

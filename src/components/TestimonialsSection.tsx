@@ -1,5 +1,6 @@
-
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { scrollToForm } from "@/lib/utils";
 
 const TestimonialsSection = () => {
   const stats = [
@@ -26,20 +27,19 @@ const TestimonialsSection = () => {
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
               🎥 Depoimentos Reais de Transformação
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <div key={item} className="aspect-video bg-gradient-to-br from-warm-100 to-emotion-100 rounded-xl flex items-center justify-center border-2 border-dashed border-warm-300">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🎬</div>
-                    <p className="text-sm text-gray-600">Vídeo de Depoimento {item}</p>
-                    <p className="text-xs text-gray-500 mt-1">(16:9 - Pronto para inserir)</p>
-                  </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[1, 2, 3].map((item) => (
+                <div key={item} className="aspect-[9/16] bg-gradient-to-br from-warm-100 to-emotion-100 rounded-xl flex items-center justify-center border-2 border-dashed border-warm-300 overflow-hidden">
+                  <video
+                    src={`/assets/videos/depoimento-${item}.mp4`}
+                    controls
+                    className="w-full h-full object-cover rounded-xl"
+                    aria-label={`Vídeo de Depoimento ${item}`}
+                  />
                 </div>
               ))}
             </div>
-            <p className="text-sm text-gray-600 text-center mt-4">
-              * Espaço reservado para incorporar os vídeos reais de depoimentos em formato 16:9
-            </p>
+
           </div>
           
           {/* Estatísticas */}
@@ -58,6 +58,15 @@ const TestimonialsSection = () => {
             </p>
           </div>
         </div>
+        <div className="flex justify-center mt-8"> 
+          <Button 
+                onClick={scrollToForm}
+                size="lg"
+                className="w-full md:w-auto bg-gradient-to-r from-emotion-500 to-emotion-600 hover:from-emotion-600 hover:to-emotion-700 text-white text-xl font-bold py-6 px-12 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              >
+                🎯 Quero libertar minha voz
+              </Button>
+          </div>
       </div>
     </section>
   );

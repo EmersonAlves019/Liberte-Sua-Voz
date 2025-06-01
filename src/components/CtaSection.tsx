@@ -5,21 +5,15 @@ import InscriptionForm from "./InscriptionForm";
 
 const CtaSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-emotion-500 via-emotion-600 to-warm-600">
+    <section id="inscription-form-section" className="py-16 bg-gradient-to-br from-emotion-500 via-emotion-600 to-warm-600">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center text-white">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              🚨 As vagas são limitadas. E o próximo passo é seu.
+              🎯 A virada na sua comunicação começa aqui — e é 100% gratuita.
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-95">
-              O evento presencial LIBERTE SUA VOZ acontecerá em Porto Alegre/RS, e as vagas são intencionalmente reduzidas para garantir uma experiência íntima, acolhedora e transformadora.
-            </p>
-            <p className="text-2xl md:text-3xl font-bold mb-4">
-              Essa não é apenas mais uma palestra.
-            </p>
-            <p className="text-xl md:text-2xl font-semibold">
-              É um chamado para quem está cansado de se calar.
+              Entre no grupo exclusivo do WhatsApp, participe da live ao vivo com Thamy Kaufmann e receba um desconto especial que só será revelado para quem estiver lá. Sua voz merece esse primeiro passo.
             </p>
           </div>
           
@@ -43,11 +37,8 @@ const CtaSection = () => {
                 <div className="text-gray-800 space-y-3">
                   <h3 className="text-xl font-bold">🎁 BÔNUS EXCLUSIVO:</h3>
                   <p className="text-lg">
-                    Os 20 primeiros inscritos ganham uma mentoria online ao vivo com Thamy Kaufmann, para acelerar ainda mais sua transformação após o evento.
+                    Os 20 primeiros que adquirirem os ingressos ganharão uma mentoria online ao vivo com Thamy Kaufmann, para acelerar ainda mais sua transformação antes mesmo do evento.
                   </p>
-                  <div className="bg-emotion-500 text-white p-3 rounded-lg text-center font-semibold">
-                    ⏳ Lote promocional com desconto por tempo limitado!
-                  </div>
                 </div>
               </Card>
               

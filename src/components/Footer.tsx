@@ -1,10 +1,11 @@
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-bold text-warm-400 mb-4">
                 Liberte Sua Voz
@@ -14,7 +15,7 @@ const Footer = () => {
               </p>
             </div>
             
-            <div className="text-center">
+            {/* <div className="text-center">
               <h4 className="text-lg font-semibold mb-4">Links Importantes</h4>
               <div className="space-y-2">
                 <a href="#" className="block text-gray-300 hover:text-warm-400 transition-colors duration-200">
@@ -27,19 +28,13 @@ const Footer = () => {
                   Suporte
                 </a>
               </div>
-            </div>
+            </div> */}
             
             <div className="text-center md:text-right">
               <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
               <div className="flex justify-center md:justify-end space-x-4">
-                <a href="#" className="text-2xl text-gray-300 hover:text-pink-400 transition-colors duration-200">
-                  📷
-                </a>
-                <a href="#" className="text-2xl text-gray-300 hover:text-green-400 transition-colors duration-200">
-                  💬
-                </a>
-                <a href="#" className="text-2xl text-gray-300 hover:text-red-400 transition-colors duration-200">
-                  🎥
+                <a href="https://www.instagram.com/thamykaufmann/" target="_blank" className="text-2xl text-gray-300 hover:text-pink-400 transition-colors duration-200">
+                  <Instagram />
                 </a>
               </div>
             </div>

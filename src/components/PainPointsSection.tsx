@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { scrollToForm } from "@/lib/utils";
 
 const PainPointsSection = () => {
   const painPoints = [
@@ -61,6 +63,15 @@ const PainPointsSection = () => {
             <p className="text-lg text-emotion-700 font-medium">
               E a boa notícia é: existe um caminho — e ele começa quando você decide libertar sua voz.
             </p>
+          </div>
+          <div className="flex justify-center mt-8"> 
+          <Button 
+                onClick={scrollToForm}
+                size="lg"
+                className="w-full md:w-auto bg-gradient-to-r from-emotion-500 to-emotion-600 hover:from-emotion-600 hover:to-emotion-700 text-white text-xl font-bold py-6 px-12 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              >
+                🎯 Quero libertar minha voz
+              </Button>
           </div>
         </div>
       </div>

@@ -1,14 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { scrollToForm } from "@/lib/utils";
 
 const HeroSection = () => {
-  const scrollToForm = () => {
-    const formElement = document.getElementById('inscription-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="pt-24 pb-16 bg-gradient-to-br from-warm-50 via-white to-emotion-50">
@@ -21,30 +16,21 @@ const HeroSection = () => {
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-                Liberte Sua Voz e Transforme Sua 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-warm-600 to-emotion-600">Liberte Sua Voz</span> e Transforme Sua 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-warm-600 to-emotion-600"> Comunicação</span> em Sua Maior Fonte de 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emotion-600 to-warm-600"> Poder e Oportunidades</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
-                Um treinamento presencial e transformador em Porto Alegre para quem está cansado de se esconder, quer vencer o medo de falar em público e assumir, de uma vez por todas, o protagonismo da própria voz — com verdade, impacto e liberdade.
+              Transforme sua comunicação agora: entre no grupo gratuito do WhatsApp e participe da live especial com Thamy Kaufmann — onde você já começa a desbloquear sua voz, vencer o medo de se expor e descobrir como conquistar presença e autoridade ao se comunicar.
               </p>
               
               <div className="bg-gradient-to-r from-warm-100 to-emotion-100 border-2 border-warm-300 rounded-2xl p-6 my-8">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">📅 Informações do Evento</h3>
-                  <div className="grid md:grid-cols-3 gap-4 text-lg">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">🚨 Informação Importante</h3>
+                  <div className=" gap-4 text-lg">
                     <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="font-semibold text-warm-700">Data</div>
-                      <div className="text-gray-900">Em breve</div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="font-semibold text-warm-700">Horário</div>
-                      <div className="text-gray-900">Das 9h às 18h</div>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="font-semibold text-warm-700">Local</div>
-                      <div className="text-gray-900">Porto Alegre/RS</div>
+                      <div className="font-semibold text-warm-700">Lives Diárias APENAS para Membros do GRUPO</div>
                     </div>
                   </div>
                 </div>

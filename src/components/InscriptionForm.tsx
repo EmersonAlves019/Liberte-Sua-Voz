@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
+import { toast, useToast } from "@/hooks/use-toast";
 
 const InscriptionForm = () => {
   const [formData, setFormData] = useState({
@@ -17,17 +17,39 @@ const InscriptionForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simular envio do formulário
-    setTimeout(() => {
+    const {
+      VITE_GOOGLE_FORM_URL,
+      VITE_WHATSAPP_GROUP_URL,
+      VITE_GOOGLE_FORM_NAME,
+      VITE_GOOGLE_FORM_EMAIL,
+      VITE_GOOGLE_FORM_WHATSAPP,
+    }  = import.meta.env
+
+    const params = new URLSearchParams({
+      [VITE_GOOGLE_FORM_NAME]: formData.name,
+      [VITE_GOOGLE_FORM_EMAIL]: formData.email,
+      [VITE_GOOGLE_FORM_WHATSAPP]: formData.whatsapp,
+    });
+
+
+    const response = await fetch(`${VITE_GOOGLE_FORM_URL}${params.toString()}`, {
+      method: 'POST',
+      mode: 'no-cors',
+    });
+
+
+    if (response) {
+      window.open(VITE_WHATSAPP_GROUP_URL, "_blank");
+
+
       toast({
         title: "🎉 Inscrição realizada com sucesso!",
-        description: "Você receberá todas as informações por WhatsApp e e-mail em breve.",
       });
       setIsSubmitting(false);
       setFormData({ name: "", email: "", whatsapp: "" });
-    }, 1000);
+    }
   };
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
